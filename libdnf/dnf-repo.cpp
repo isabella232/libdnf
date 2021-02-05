@@ -1832,9 +1832,9 @@ dnf_repo_update(DnfRepo *repo,
 
     /* see dnf_repo_check_internal */
     if (!dnf_context_get_enable_filelists(priv->context)) {
-        const gchar *blacklist[] = { "filelists", NULL };
+        const gchar *yumblist[] = { "filelists", NULL };
         ret = lr_handle_setopt(priv->repo_handle, error,
-                               LRO_YUMBLIST, blacklist);
+                               LRO_YUMBLIST, yumblist);
         if (!ret)
             goto out;
     }
